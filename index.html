@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <BODY>
 
@@ -18,58 +18,58 @@
   </p>
 </div>
 
-<div class="jumbotron" id="question1">
+<div class="jumbotron hidden" id="question1">
     <h1 class="display-4">Coding Quiz</h1>
     <p class="lead">What tags are used to reference a Javascript file?</p>
     <hr class="my-4">
     <p>Please choose an answer below:</p>
-    <p class="lead">
-        <button type="button" class="btn btn-primary" id="Q1A1">body</button>
+    <p class="lead" data-answer="script">
+        <button type="button" class="btn btn-primary answer" id="Q1A1" data-answer="body">body</button>
         <br><br>
-        <button type="button" class="btn btn-primary" id="Q1A2">style</button>
+        <button type="button" class="btn btn-primary answer" id="Q1A2" data-answer="style">style</button>
         <br><br>
-        <button type="button" class="btn btn-primary" id="Q1A3">script</button>
+        <button type="button" class="btn btn-primary answer" id="Q1A3" data-answer="script">script</button>
     </p>
   </div>
 
-  <div class="jumbotron" id="quesion2">
+  <div class="jumbotron hidden" id="question2">
     <h1 class="display-4">Coding Quiz</h1>
     <p class="lead">What is the definition of JavaScript?</p>
     <hr class="my-4">
     <p>Please choose an answer below:</p>
     <p class="lead">
-        <button type="button" class="btn btn-primary" id="Q2A1">An object-oriented computer programming language commonly used to create interactive effects within web browsers.</button>
+        <button type="button" class="btn btn-primary answer" id="Q2A1">An object-oriented computer programming language commonly used to create interactive effects within web browsers.</button>
         <br><br>
-        <button type="button" class="btn btn-primary" id="Q2A2">Used to format the layout of Web pages. They can be used to define text styles, table sizes, and other aspects of Web pages that previously could only be defined in a page's HTML.</button>
+        <button type="button" class="btn btn-primary answer" id="Q2A2">Used to format the layout of Web pages. They can be used to define text styles, table sizes, and other aspects of Web pages that previously could only be defined in a page's HTML.</button>
         <br><br>
-        <button type="button" class="btn btn-primary" id="Q2A3">A standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.</button>
+        <button type="button" class="btn btn-primary answer" id="Q2A3">A standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.</button>
     </p>
   </div>
 
-  <div class="jumbotron" id="question3">
+  <div class="jumbotron hidden" id="question3">
     <h1 class="display-4">Coding Quiz</h1>
     <p class="lead">What is an array?</p>
     <hr class="my-4">
     <p>Please choose an answer below:</p>
     <p class="lead">
-        <button type="button" class="btn btn-primary" id="Q3A1">Container for named values called properties or methods</button>
+        <button type="button" class="btn btn-primary answer" id="Q3A1">Container for named values called properties or methods</button>
         <br><br>
-        <button type="button" class="btn btn-primary" id="Q3A2">A single variable that is used to store different elements</button>
+        <button type="button" class="btn btn-primary answer" id="Q3A2">A single variable that is used to store different elements</button>
         <br><br>
-        <button type="button" class="btn btn-primary" id="Q3A3">Action that can be performed on objects</button>
+        <button type="button" class="btn btn-primary answer" id="Q3A3">Action that can be performed on objects</button>
     </p>
   </div>
 
-  <div class="container" id="timer">
+  <div class="container hidden" id="timer">
     <div class="row">
       <div class="col">
-      <h1>Seconds left: </h1>
+      <h1>Seconds left: <span id="timeLeft"></span></h1>
   </div>
 
-  <div class="container" id="endPage">
+  <div class="container hidden" id="endPage">
     <div class="row">
       <div class="col">
-       <h3>Your score is:</h3>
+       <h3>Your score is: </h3>
       </div>
       <div class="col-6">
         <form>
@@ -82,8 +82,7 @@
       </div>
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<script src="script.js"></script>
 </BODY>
