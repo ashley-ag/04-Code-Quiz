@@ -27,21 +27,57 @@ $(".answer").on("click", function() {
         currentQuestion++; 
         $("#question" + currentQuestion).removeClass("hidden"); 
     } else {
-        console.log("answer is wrong.")
-    //time -= 10
-    //flip to next question
-    //hide current question
+       //console.log("answer is wrong.")
+        timer -= 10;
+        //flip to next question
+        //hide current question
+        $("#question" + currentQuestion).addClass("hidden"); 
+        currentQuestion++; 
+        $("#question" + currentQuestion).removeClass("hidden"); 
     }
 })
 
-//time -= 10
-//flip to next question
-//hide current question
+//timer must hide
+//score needs to show
+
+if (currentQuestion === 2) {
+    $("#timer").addClass("hidden");
+    clearInterval(timerInterval);
+}
 
 
 
-////use an if statement that addresses all of the question divs
+var scoresFromStorage = JSON.parse(localStorage.getItem("scores"));
 
+if (!scoresFromStorage){
+    scoresFromStorage = [];
+}
+
+for (var i = 0; i < scoresFromStorage.length; i++){
+    var paragraph = document.createElement("p");
+
+    paragraph.innerText = scoresFromStorage[i].name + "'s score is " + scoresFromStorage[i].score;
+
+    document.body.appendChild(paragraph);
+}
+
+var storeButton = document.getElementById("store");
+var nameInput =  document.getElementById("initials");
+var scoreInput =  document.getElementById("score");
+
+storeButton.addEventListener("click", function(){
+    var name = nameInput.value;
+    var score = scoreInput.value;
+
+    var newLocalStorageEntry = {
+        name: name,
+        score: score
+    };
+
+    scoresFromStorage.push(newLocalStorageEntry);
+
+    localStorage.setItem("scores", JSON.stringify(scoresFromStorage));
+})
 
 //if the question was answered correctly "Correct!" must show on the screen, score +=10, flip to next question or #endPage div
 

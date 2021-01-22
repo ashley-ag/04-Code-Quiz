@@ -37,12 +37,12 @@
     <p class="lead">What is the definition of JavaScript?</p>
     <hr class="my-4">
     <p>Please choose an answer below:</p>
-    <p class="lead">
-        <button type="button" class="btn btn-primary answer" id="Q2A1">An object-oriented computer programming language commonly used to create interactive effects within web browsers.</button>
+    <p class="lead" data-answer="A1">
+        <button type="button" class="btn btn-primary answer" id="Q2A1" data-answer="A1">An object-oriented computer programming language commonly used to create interactive effects within web browsers.</button>
         <br><br>
-        <button type="button" class="btn btn-primary answer" id="Q2A2">Used to format the layout of Web pages. They can be used to define text styles, table sizes, and other aspects of Web pages that previously could only be defined in a page's HTML.</button>
+        <button type="button" class="btn btn-primary answer" id="Q2A2" data-answer="A2">Used to format the layout of Web pages. They can be used to define text styles, table sizes, and other aspects of Web pages that previously could only be defined in a page's HTML.</button>
         <br><br>
-        <button type="button" class="btn btn-primary answer" id="Q2A3">A standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.</button>
+        <button type="button" class="btn btn-primary answer" id="Q2A3" data-answer="A3">A standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.</button>
     </p>
   </div>
 
@@ -51,12 +51,12 @@
     <p class="lead">What is an array?</p>
     <hr class="my-4">
     <p>Please choose an answer below:</p>
-    <p class="lead">
-        <button type="button" class="btn btn-primary answer" id="Q3A1">Container for named values called properties or methods</button>
+    <p class="lead" data-answer="Answer2">
+        <button type="button" class="btn btn-primary answer" id="Q3A1" data-answer="Answer1">Container for named values called properties or methods</button>
         <br><br>
-        <button type="button" class="btn btn-primary answer" id="Q3A2">A single variable that is used to store different elements</button>
+        <button type="button" class="btn btn-primary answer" id="Q3A2" data-answer="Answer2">A single variable that is used to store different elements</button>
         <br><br>
-        <button type="button" class="btn btn-primary answer" id="Q3A3">Action that can be performed on objects</button>
+        <button type="button" class="btn btn-primary answer" id="Q3A3" data-answer="Answer3">Action that can be performed on objects</button>
     </p>
   </div>
 
@@ -66,10 +66,10 @@
       <h1>Seconds left: <span id="timeLeft"></span></h1>
   </div>
 
-  <div class="container hidden" id="endPage">
+  <div class="container hidden" id="question4">
     <div class="row">
       <div class="col">
-       <h3>Your score is: </h3>
+       <h3>Your score is: <span id="score"></span></h3>
       </div>
       <div class="col-6">
         <form>
@@ -77,7 +77,7 @@
               <label for="exampleInputPassword1">Enter your initials to post your high score:</label>
               <input type="initials" class="form-control" id="exampleInputPassword1" placeholder="Initials">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
           </form>
       </div>
 
