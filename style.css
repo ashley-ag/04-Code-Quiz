@@ -3,3 +3,16 @@
  display: none
 }
 
+.incorrect {
+    color: red;
+    text-shadow: 2px 4px 4px rgb(92, 92, 92)
+}
+
+.correct {
+    color: rgb(30, 255, 30);
+    text-shadow: 2px 4px 4px rgb(92, 92, 92)
+}
+
+#scorePage {
+    margin: 20px;
+}
